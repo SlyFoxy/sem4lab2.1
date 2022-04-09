@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace sem4lab2._1
+﻿namespace sem4lab2._1
 {
-    sealed class Client : Person
+    public class Client : Person
     {
         public string company { get; set; }
 		public Client() : this("Tsal'", "Vitaliy", "Olegovich")

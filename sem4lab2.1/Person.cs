@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace sem4lab2._1
+﻿namespace sem4lab2._1
 {
-	abstract class Person
+	public abstract class Person
 	{
 		public string lastName { get; set; } = "Tsal'";
 		public string firstName { get; set; } = "Vitaliy";

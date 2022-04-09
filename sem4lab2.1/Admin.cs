@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace sem4lab2._1
+﻿namespace sem4lab2._1
 {
-    sealed class Admin : Person
+    public sealed class Admin : Person
     {
         public string adminID { get; set; }
         public new string firstName { get; set; }
