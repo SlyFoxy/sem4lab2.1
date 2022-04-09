@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sem4lab2.1", "sem4lab2.1\sem4lab2.1.csproj", "{F19F9330-2F81-439A-8B6A-7BC31CD91D36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F19F9330-2F81-439A-8B6A-7BC31CD91D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19F9330-2F81-439A-8B6A-7BC31CD91D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19F9330-2F81-439A-8B6A-7BC31CD91D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19F9330-2F81-439A-8B6A-7BC31CD91D36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62FBAB61-BC34-4472-99AD-824DCBC5F6AA}
+	EndGlobalSection
+EndGlobal
