@@ -1,6 +1,6 @@
 ﻿namespace sem4lab2._1
 {
-    public class Client : Person
+    public class Client : Person, IDrawable
     {
         public string company { get; set; }
 		public Client() : this("Tsal'", "Vitaliy", "Olegovich")
@@ -21,6 +21,18 @@
         public override string selfDescribe()
         {
             return "Client: " + getFullName;
+        }
+
+        public string this[int index] => "Client" + index;
+        public string PrintContent { get => firstName; }
+        public void Print(MessageSender sender)
+        {
+            sender(PrintContent);
+        }
+
+        public void Draw(string something, MessageSender sender)
+        {
+            sender("Drawed Client " + something);
         }
     }
 }

@@ -17,8 +17,12 @@ namespace sem4lab2._1
             Admins = new List<Admin>();
         }
 
-        private void ClientAddButton_Click_1(object sender, RoutedEventArgs e)
+        private void SendMessage (string message)
         {
+            MessageBox.Show(message);
+        }
+        private void ClientAddButton_Click_1(object sender, RoutedEventArgs e)
+        {   
             Client client = new Client();
             client.lastName = this.lastName_Copy.Text;
             client.firstName = this.firstName_Copy.Text;
@@ -29,6 +33,9 @@ namespace sem4lab2._1
             client.age = int.Parse(age_Copy.Text);
             client.sex = this.sex_Copy.Text;
             client.company = this.company.Text;
+
+            IPrintable printable = client;
+            printable.Print(SendMessage);
 
             Clients.Add(client);
             this.ClientsList.Items.Add(client);
@@ -47,8 +54,30 @@ namespace sem4lab2._1
             admin.sex = this.sex.Text;
             admin.adminID = this.adminID.Text;
 
+            IPrintable printable = admin;
+            printable.Print(SendMessage);
+
             Admins.Add(admin);
             this.AdminsList.Items.Add(admin);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Client client1 = new Client("Tsal'", "Vitaliy", "Olegovich", "19.11.1990",
+                "+380935617360", "AsusGromyako", "PID123456789", 31, "M");
+
+            client1.firstName = "Vitaliyaridze";
+            IDrawable printable = client1;
+
+            printable.Print(SendMessage);
+
+            MessageBox.Show(printable[0]);
+
+            printable = client1;
+
+            printable.Print(x => MessageBox.Show(x));
+
+            printable.Draw(printable.PrintContent, SendMessage);
         }
     }
 }

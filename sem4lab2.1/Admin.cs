@@ -1,6 +1,6 @@
 ﻿namespace sem4lab2._1
 {
-    public sealed class Admin : Person
+    public sealed class Admin : Person, IPrintable
     {
         public string adminID { get; set; }
         public new string firstName { get; set; }
@@ -23,6 +23,18 @@
         public override string selfDescribe()
         {
             return "Admin: " + getFullName;
+        }
+
+        public string this[int index] => "Admin" + index;
+        public string PrintContent { get => firstName; }
+        public void Print(MessageSender sender)
+        {
+            sender(PrintContent);
+        }
+
+        public void Draw(string something, MessageSender sender)
+        {
+            sender("Drawed Admin " + something);
         }
     }
 }

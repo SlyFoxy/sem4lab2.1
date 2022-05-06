@@ -80,6 +80,7 @@
         <Label Content="Клієнти" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Height="35" Width="142" FontSize="16"/>
         <Button x:Name="ClientAddButton" Content="Додати клієнта" HorizontalAlignment="Left" Margin="1109,471,0,0" VerticalAlignment="Top" Height="82" Width="322" Click="ClientAddButton_Click_1"/>
         <Button x:Name="AdminAddButton" Content="Додати адміністратора" HorizontalAlignment="Left" Margin="29,471,0,0" VerticalAlignment="Top" Height="82" Width="308" Click="AdminAddButton_Click"/>
+        <Button Content="Delegate" HorizontalAlignment="Center" Margin="0,471,0,0" VerticalAlignment="Top" Height="82" Width="308" Click="Button_Click"/>
 
     </Grid>
 </Window>
