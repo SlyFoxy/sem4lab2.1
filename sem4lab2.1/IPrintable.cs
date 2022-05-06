@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace sem4lab2._1
+﻿namespace sem4lab2._1
 {
     public delegate void MessageSender(string message);
     internal interface IPrintable
