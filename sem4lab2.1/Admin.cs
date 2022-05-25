@@ -1,10 +1,9 @@
 ﻿namespace sem4lab2._1
 {
-    public sealed class Admin : Person, IPrintable
+    public sealed class Admin : Person
     {
-        public string adminID { get; set; }
-        public new string firstName { get; set; }
-		public Admin() : this("Tsal'", "Vitaliy", "Olegovich")
+        public string AdminID { get; set; } = "adm1";
+		/*public Admin() : this("Tsal'", "Vitaliy", "Olegovich")
         {
 
         }
@@ -35,6 +34,6 @@
         public void Draw(string something, MessageSender sender)
         {
             sender("Drawed Admin " + something);
-        }
+        }*/
     }
 }

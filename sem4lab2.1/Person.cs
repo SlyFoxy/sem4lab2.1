@@ -1,16 +1,20 @@
-﻿namespace sem4lab2._1
+﻿using System;
+
+namespace sem4lab2._1
 {
 	public abstract class Person
 	{
-		public string lastName { get; set; } = "Tsal'";
-		public string firstName { get; set; } = "Vitaliy";
-		public string middleName { get; set; } = "Olegovich";
-		public string dateOfBirth { get; set; } = "19.11.1990";
-		public string telephoneNumber { get; set; } = "+380935617360";
-		public string passportID { get; set; } = "PID123456789";
-		public int age { get; set; } = 31;
-		public string sex { get; set; } = "M";
-		public Person() : this("Tsal'", "Vitaliy", "Olegovich")
+		public int Id { get; set; }
+		public string LastName { get; set; } = "Tsal'";
+		public string FirstName { get; set; } = "Vitaliy";
+		public string MiddleName { get; set; } = "Olegovich";
+		public DateTime DateOfBirth { get; set; } = new DateTime(1990,11,19);
+		public string TelephoneNumber { get; set; } = "+380935617360";
+		public string PassportID { get; set; } = "PID123456789";		
+		public string Sex { get; set; } = "M";
+		public string Login { get; set; } = "login";
+		public string Password { get; set; } = "password";
+		/*public Person() : this("Tsal'", "Vitaliy", "Olegovich")
 		{
 
 		}
@@ -26,7 +30,8 @@
 			dateOfBirth = _dateOfBirth; telephoneNumber = _telephoneNumber; passportID = _passportID;
 			age = _age; sex = _sex;
 		}
-		public string getFullName { get { return lastName + " " + firstName + " " + middleName; } }
-		public abstract string selfDescribe();
+		
+		public abstract string selfDescribe();*/
+		public string FullName => LastName + " " + FirstName + " " + MiddleName;
 	}
 }

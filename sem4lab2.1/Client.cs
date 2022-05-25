@@ -1,9 +1,13 @@
-﻿namespace sem4lab2._1
+﻿using System.Collections.Generic;
+
+namespace sem4lab2._1
 {
-    public class Client : Person, IDrawable
+    public class Client : Person
     {
-        public string company { get; set; }
-		public Client() : this("Tsal'", "Vitaliy", "Olegovich")
+        //List<Account^>^ accounts;  !!!
+        public Account Account { get; set; }   //???
+        public string Company { get; set; } = "Company";
+		/*public Client() : this("Tsal'", "Vitaliy", "Olegovich")
         {
 
         }
@@ -33,6 +37,6 @@
         public void Draw(string something, MessageSender sender)
         {
             sender("Drawed Client " + something);
-        }
+        }*/
     }
 }

@@ -1,0 +1,32 @@
+﻿<Window x:Class="sem4lab2._1.AdminTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sem4lab2._1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800">
+    <Grid>
+        <Label Content="Статус кредитних карт" HorizontalAlignment="Left" Height="33" Margin="168,20,0,0" VerticalAlignment="Top" Width="476" FontSize="18"/>
+        <Button Content="Повернутись" HorizontalAlignment="Left" Height="57" Margin="10,367,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click"/>
+        <DataGrid Margin="84,64,48,124" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="CardList">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Number" Binding="{Binding Path=CardNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Path=CardBalance}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CreditLimit" Binding="{Binding Path=CreditLimit}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Account" Binding="{Binding Path=Account.AccountName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Client" Binding="{Binding Path=Account.Client.FullName}" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Header="Block" Binding="{Binding Path=IsBlocked}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="Застосувати зміни" HorizontalAlignment="Left" Height="57" Margin="584,367,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

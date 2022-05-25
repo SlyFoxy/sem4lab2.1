@@ -1,0 +1,42 @@
+﻿<Window x:Class="sem4lab2._1.ClientTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sem4lab2._1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="1038" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="517*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Оплата замовлення" HorizontalAlignment="Left" Height="93" Margin="47,23,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_1"/>
+        <Button Content="Переказ коштів" HorizontalAlignment="Left" Height="85" Margin="47,132,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_2"/>
+        <Button Content="Повернутись" HorizontalAlignment="Left" Height="57" Margin="10,367,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click"/>
+        <Button Content="Анулювати рахунок" HorizontalAlignment="Left" Height="94" Margin="287,330,0,0" VerticalAlignment="Top" Width="236" Click="Button_Click_4"/>
+        <Button Content="Застосувати зміни" HorizontalAlignment="Left" Height="94" Margin="546,330,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_3"/>
+
+        <Button Content="Оформлення карти" HorizontalAlignment="Left" Height="93" Margin="47,236,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click_5"/>
+        <DataGrid  Margin="268,41,1,144" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="CreditList" SelectionChanged="CreditList_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CreditCard" Binding="{Binding Path=CardNumber}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Exp" Binding="{Binding Path=CardExpDate, StringFormat=\{0:MM/y\}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CVV" Binding="{Binding Path=CardCVV}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Path=CardBalance}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CreditLimit" Binding="{Binding Path=CreditLimit}" IsReadOnly="False"/>
+                <DataGridCheckBoxColumn Header="IsBlocked" Binding="{Binding Path=IsBlocked}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Поповнення картки" HorizontalAlignment="Left" Height="94" Margin="781,330,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click_6" />
+        <Label Content="Клієнт:" HorizontalAlignment="Left" Margin="748,10,0,0" VerticalAlignment="Top" Height="22" Width="58"/>
+        <TextBlock x:Name="ClientName" HorizontalAlignment="Left" Margin="811,14,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="217" Height="14"/>
+
+    </Grid>
+</Window>

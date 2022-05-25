@@ -10,77 +10,20 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="609" Width="1462">
-    <Grid RenderTransformOrigin="0.542,0.43">
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Margin="8,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Прізвище" HorizontalAlignment="Left" Margin="8,9,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Ім'я" HorizontalAlignment="Left" Margin="6,56,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="middleName" HorizontalAlignment="Left" Margin="8,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="По-батькові" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="dateOfBirth" HorizontalAlignment="Left" Margin="10,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Дата народження" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="telephoneNumber" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Номер телефону" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="passportID" HorizontalAlignment="Left" Margin="10,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Номер паспорта" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="age" HorizontalAlignment="Left" Margin="10,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Вік" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="sex" HorizontalAlignment="Left" Margin="10,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Стать" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="adminID" HorizontalAlignment="Left" Margin="10,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Admin ID" HorizontalAlignment="Left" Margin="10,371,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="AdminsList" Margin="184,47,202,365">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Прізвище" DisplayMemberBinding="{Binding lastName}"/>
-                    <GridViewColumn Header="Ім'я" DisplayMemberBinding="{Binding firstName}"/>
-                    <GridViewColumn Header="По-батькові" DisplayMemberBinding="{Binding middleName}"/>
-                    <GridViewColumn Header="Дата народження" DisplayMemberBinding="{Binding dateOfBirth}"/>
-                    <GridViewColumn Header="Номер телефону" DisplayMemberBinding="{Binding telephoneNumber}"/>
-                    <GridViewColumn Header="Вік" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="Стать" DisplayMemberBinding="{Binding sex}"/>
-                    <GridViewColumn Header="Admin ID" DisplayMemberBinding="{Binding adminID}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label Content="Адміністратори" HorizontalAlignment="Center" Margin="0,19,0,0" VerticalAlignment="Top" Height="35" Width="141" FontSize="16"/>
-        <TextBox x:Name="lastName_Copy" HorizontalAlignment="Left" Margin="1286,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Прізвище" HorizontalAlignment="Left" Margin="1286,20,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstName_Copy" HorizontalAlignment="Left" Margin="1286,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Ім'я" HorizontalAlignment="Left" Margin="1284,67,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="middleName_Copy" HorizontalAlignment="Left" Margin="1286,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="По-батькові" HorizontalAlignment="Left" Margin="1286,112,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="dateOfBirth_Copy" HorizontalAlignment="Left" Margin="1288,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Дата народження" HorizontalAlignment="Left" Margin="1288,157,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="telephoneNumber_Copy" HorizontalAlignment="Left" Margin="1288,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Номер телефону" HorizontalAlignment="Left" Margin="1288,202,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="passportID_Copy" HorizontalAlignment="Left" Margin="1288,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Номер паспорта" HorizontalAlignment="Left" Margin="1288,247,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="age_Copy" HorizontalAlignment="Left" Margin="1288,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Вік" HorizontalAlignment="Left" Margin="1288,292,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="sex_Copy" HorizontalAlignment="Left" Margin="1288,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Стать" HorizontalAlignment="Left" Margin="1288,337,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="company" HorizontalAlignment="Left" Margin="1288,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Компанія" HorizontalAlignment="Left" Margin="1288,382,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="ClientsList" Margin="184,270,202,142">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Прізвище" DisplayMemberBinding="{Binding lastName}"/>
-                    <GridViewColumn Header="Ім'я" DisplayMemberBinding="{Binding firstName}"/>
-                    <GridViewColumn Header="По-батькові" DisplayMemberBinding="{Binding middleName}"/>
-                    <GridViewColumn Header="Дата народження" DisplayMemberBinding="{Binding dateOfBirth}"/>
-                    <GridViewColumn Header="Номер телефону" DisplayMemberBinding="{Binding telephoneNumber}"/>
-                    <GridViewColumn Header="Вік" DisplayMemberBinding="{Binding age}"/>
-                    <GridViewColumn Header="Стать" DisplayMemberBinding="{Binding sex}"/>
-                    <GridViewColumn Header="Компанія" DisplayMemberBinding="{Binding company}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label Content="Клієнти" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Height="35" Width="142" FontSize="16"/>
-        <Button x:Name="ClientAddButton" Content="Додати клієнта" HorizontalAlignment="Left" Margin="1109,471,0,0" VerticalAlignment="Top" Height="82" Width="322" Click="ClientAddButton_Click_1"/>
-        <Button x:Name="AdminAddButton" Content="Додати адміністратора" HorizontalAlignment="Left" Margin="29,471,0,0" VerticalAlignment="Top" Height="82" Width="308" Click="AdminAddButton_Click"/>
-        <Button Content="Delegate" HorizontalAlignment="Center" Margin="0,471,0,0" VerticalAlignment="Top" Height="82" Width="308" Click="Button_Click"/>
+        Title="MainWindow" Height="609" Width="822" Closing="Window_Closing">
+    <Grid RenderTransformOrigin="0.496,0.512">
+        <Label Content="Оберіть права доступу" HorizontalAlignment="Left" Margin="266,91,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <RadioButton x:Name="radioButton1" Content="Адміністратор" HorizontalAlignment="Left" Margin="219,198,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="radioButton2" Content="Клієнт" HorizontalAlignment="Left" Margin="610,198,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Логін:" HorizontalAlignment="Left" Margin="129,262,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="129,314,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Логін:" HorizontalAlignment="Left" Margin="519,264,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="textBoxAdm1" HorizontalAlignment="Left" Margin="232,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="27" FontSize="20"/>
+        <TextBox x:Name="textBoxAdm2" HorizontalAlignment="Left" Margin="232,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="27" FontSize="20"/>
+        <TextBox x:Name="textBoxClient1" HorizontalAlignment="Left" Margin="610,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="27" FontSize="20"/>
+        <Button Content="Далі" HorizontalAlignment="Left" Margin="322,442,0,0" VerticalAlignment="Top" Height="79" Width="302" FontSize="20" Click="Button_Click_1"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="507,314,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="textBoxClient2" HorizontalAlignment="Left" Margin="610,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="27" FontSize="20"/>
 
     </Grid>
 </Window>
